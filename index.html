@@ -4,18 +4,18 @@
 		<meta charset="UTF-8"/>
 		<title>Document</title>
 		<link rel="stylesheet" href="style.css"/>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script type="text/javascript" src="js/tabs.js"></script>
+		<script src="js/tab.js"></script>
 	</head>
 	<body>
-		<div class="tabs">
-			<ul class="tabs__caption">
-				<li class="active">Первая вкладка</li>
-				<li>Вторая вкладка</li>
-				<li>Третья вкладка</li>
-				<li>Червертая вкладка</li>
-			</ul>
-		<div class="tabs__content  active">	
+		<div id="tabContainer">
+         <div id="tabs__caption">
+			   <ul>
+               <li id="tabHeader_1">Первая вкладка</li>
+               <li id="tabHeader_2">Вторая вкладка</li>
+               <li id="tabHeader_3">Третья вкладка</li>
+			   </ul>
+         </div>
+		<div id="tabs__content1">	
 			<table border="1">
 				<thead>
  					<tr>
@@ -92,14 +92,11 @@
  					</tr>
 			</table>
 		</div>
-		<div class="tabs__content">
+		<div id="tabs__content2">
 			<p>table2</p>
 		</div>
-		<div class="tabs__content">
+		<div id="tabs__content3">
 			<p>table3</p>
-		</div>
-		<div class="tabs__content">
-			<p>table4</p>
 		</div>
 		</div>
 	</body>
