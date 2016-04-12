@@ -46,12 +46,13 @@ ul {list-style: none;
 [id^=tabHeader_]:hover {
 	color: #187d95;
 	padding: 0 13px;
-	background: #edf2c8;
+	background: #EFEFEF;
 	border: 1px solid #b7d7f0;
 }
 [id^=tabHeader_].active {
 	color: #444;
-	background: #EFEFEF;
+	background: #edf2c8;
+	font-weight: bold;
 	padding: 0 13px 2px;
 	border: 1px solid #D4D4D4;
 	border-bottom: 1px solid #EFEFEF;

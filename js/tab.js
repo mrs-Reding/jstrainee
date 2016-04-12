@@ -1,15 +1,22 @@
 window.onload=function() {
 
-var container = document.getElementById("tabContainer");
-var navitem = container.querySelector("#tabs__caption ul li");
-var ident = navitem.id.split("_")[1];
-navitem.parentNode.setAttribute("data-current",ident);
-navitem.setAttribute("class","active");
-document.getElementById("tabs__content" + ident).setAttribute("class", "active");
- var tabs = container.querySelectorAll("#tabs__caption ul li");
-    for (var i = 0; i < tabs.length; i++) {
-      tabs[i].onclick=displayPage;
-    }
+  var container = document.getElementById("tabContainer");
+  
+  for (var i = 1; i <= 3; i++) {
+    container.appendChild(generateTableHTML(null, 50, i));
+  }
+
+  var navitem = container.querySelector("#tabs__caption ul li");
+  var ident = navitem.id.split("_")[1];
+  navitem.parentNode.setAttribute("data-current",ident);
+  navitem.setAttribute("class","active");
+  document.getElementById("tabs__content" + ident).setAttribute("class", "active");
+  var tabs = container.querySelectorAll("#tabs__caption ul li");
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].onclick=displayPage;
+  }
+
+
 }
 
 function displayPage() {
@@ -22,3 +29,4 @@ function displayPage() {
   document.getElementById("tabs__content" + ident).setAttribute("class", "active");
   this.parentNode.setAttribute("data-current",ident);
 }
+
