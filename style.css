@@ -68,6 +68,21 @@ ul {list-style: none;
 	display: block;
 }
 
+#newTab {
+	padding: 4px 10px 1px;
+	font-size: large;
+	color: #777;
+	background: #F9F9F9;
+    border: 1px solid #E4E4E4;
+    border-bottom: 1px solid #F9F9F9;
+    border-radius: 10px 10px 2px 2px;
+}
+#newTab:hover {
+	background: #EFEFEF;
+	color: #187d95;
+	border: 1px solid #b7d7f0;
+}
+
 table {
 	background-color: #f7fcf5;
 	border-color: #187d95;
