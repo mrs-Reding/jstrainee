@@ -51,3 +51,4 @@ function genereateTableBody(rows, columns) {
 
   	return tbody;
 }
+

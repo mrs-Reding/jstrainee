@@ -2,8 +2,15 @@ window.onload=function() {
 
   var container = document.getElementById("tabContainer");
   
-  for (var i = 1; i <= 3; i++) {
-    container.appendChild(generateTableHTML(null, 50, i));
+  var i;
+
+  for (i = 1; i <= 3; i++) {
+    attachSheet(i);
+  }
+
+  document.getElementById("newTab").onclick = function() {
+   attachSheet(i);
+   i++;
   }
 
   var navitem = container.querySelector("#tabs__caption ul li");
@@ -11,13 +18,16 @@ window.onload=function() {
   navitem.parentNode.setAttribute("data-current",ident);
   navitem.setAttribute("class","active");
   document.getElementById("tabs__content" + ident).setAttribute("class", "active");
-  var tabs = container.querySelectorAll("#tabs__caption ul li");
-  for (var i = 0; i < tabs.length; i++) {
-    tabs[i].onclick=displayPage;
-  }
-
-
 }
+
+  function attachSheet(index) {
+    var container = document.getElementById("tabContainer");
+    var tab = generateTab(index);
+    tab.onclick = displayPage;
+    container.querySelector("#tabs__caption ul").appendChild(tab);
+    container.appendChild(generateTableHTML(null, 50, index));
+
+  }
 
 function displayPage() {
   var current = this.parentNode.getAttribute("data-current");
@@ -30,3 +40,10 @@ function displayPage() {
   this.parentNode.setAttribute("data-current",ident);
 }
 
+function generateTab (index) {
+  var tab = document.createElement("li");
+  tab.setAttribute("id","tabHeader_"+index);
+  tab.innerHTML = "Sheet " + index;
+
+  return tab;
+}
